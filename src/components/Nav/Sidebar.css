@@ -1,0 +1,145 @@
+.sidebar {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 215px;
+  background-color: rgb(58, 35, 0);
+  padding: .3rem 0;
+}
+
+.sidebarlist {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+/* .glow-on-hover #icon{
+flex: 30%;
+} */
+
+.glow-on-hover #title {
+  flex: 100%;
+}
+
+.glow-on-hover {
+  width: 95%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #5a3301;
+  cursor: pointer;
+  border-radius: 10px;
+  list-style-type: none;
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  font-family: "";
+}
+
+.glow-on-hover:before {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5a3301;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.NavBarr {
+  margin-top: 1rem;
+  background-color: rgb(58, 35, 0);
+  z-index: 1;
+  position: relative;
+  padding: 0 40px;
+}
+
+.NavBarr a {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 14px 0;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar1 {
+  float: left;
+  width: 250px;
+  height: 100%;
+  padding-bottom: 10px;
+  position: relative;
+
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(58, 35, 0);
+  margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+  text-align: center;
+}
+
+.imgAnimator {
+  z-index: 0;
+  bottom: 9rem;
+  /* background-color: #ff0000; */
+  position: relative;
+  left: 1.7rem;
+  width: 190px;
+}
