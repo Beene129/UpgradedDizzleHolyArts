@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import "./Sidebar.css"
+import AnimatedImg from '../AnimatedIMg';
+
 
 function Nav(props) {
   const {
@@ -16,24 +17,27 @@ function Nav(props) {
   return (  
     <div className='sidebar'>
       <nav>
-        <ul className="column ">
+        <div className='sidebarlist'>
           {pages.map((Page) => (
             <li
               className={`NavBarr ${
-                currentPage.name === Page.name && 'navActive'
+                currentPage.name === Page.name
                 }`}
               key={Page.name}
             >
-              <span className=' glow-on-hover'
+              <span className='glow-on-hover'
                 onClick={() => setCurrentPage(Page)}
               >
                 {capitalizeFirstLetter(Page.name)}
               </span>
             </li>
           ))}
-        </ul>
+        </div>
       </nav>
-      </div>  
+    
+   <AnimatedImg />
+ 
+   </div>
   );
 }
 

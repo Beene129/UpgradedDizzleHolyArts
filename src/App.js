@@ -3,36 +3,43 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Page from "./components/Page";
 import Footer from "./components/Footer";
-import styled from "styled-components";
-
-
+import { Container,Row , Col } from "react-bootstrap";
 
 function App() {
   const [pages] = useState([
     {
-      name: "about me",
+      name: "about\xA0Me",
     },
     { name: "portfolio" },
     { name: "contact" },
     {
-      name: "resume",
+      name: "upcoming Events",
     },
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
   return (
-    <div>
+    <div >
       <Header />
+
+      <main>
       
+
         <Nav
           pages={pages}
           setCurrentPage={setCurrentPage}
           currentPage={currentPage}
-        ></Nav>
+        />
+        <Container>
+  <Row>
+  
       
-      <main>
+<Col md={5}>
         <Page currentPage={currentPage}></Page>
+        </Col>
+        </Row>      
+        </Container>
       </main>
       <Footer />
     </div>

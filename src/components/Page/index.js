@@ -3,8 +3,10 @@ import PageContent from '../PageContent';
 import About from '../About';
 import Portfolio from '../Portfolio';
 import Contact from '../Contact';
-import Resume from '../Resume';
+import UpcomingEvents from '../UpcomingEvents';
+import Project from '../Project';
 import { capitalizeFirstLetter } from '../../utils/helpers';
+import Container from 'react-bootstrap/esm/Container';
 
 function Page({ currentPage }) {
 
@@ -16,18 +18,18 @@ function Page({ currentPage }) {
         return <Portfolio />;
       case 'contact':
         return <Contact />;
-      case 'resume':
-        return <Resume />;
+      case 'upcomingEvents':
+        return <UpcomingEvents />;
       default:
-        return <About />;
+        return <About/>;
     }
   };
 
   return (
-    <section>
+    <Container className="pageContent">
       <h2>{capitalizeFirstLetter(currentPage.name)}</h2>
       <PageContent>{renderPage()}</PageContent>
-    </section>
+    </Container>
   );
 }
 export default Page;

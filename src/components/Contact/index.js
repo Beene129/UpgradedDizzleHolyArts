@@ -41,7 +41,12 @@ function Contact() {
   };
 
   return (
-    <section>
+    <section style={{padding: '9rem 0 0 0'}}>
+      <div>
+        <p>
+          {/* ADD MORE WORDS HERE */}
+        </p>
+      </div>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -49,12 +54,14 @@ function Contact() {
             type="text"
             name="name"
             defaultValue={name}
+            placeholder="Enter name"
             onBlur={handleChange}
           />
         </div>
         <div>
           <label htmlFor="email">Email address:</label>
           <input
+          placeholder="name@example.com"
             type="email"
             name="email"
             defaultValue={email}
@@ -64,6 +71,7 @@ function Contact() {
         <div>
           <label htmlFor="message">Message:</label>
           <textarea
+          placeholder="Im intrested in your service!"
             name="message"
             rows="5"
             defaultValue={message}
